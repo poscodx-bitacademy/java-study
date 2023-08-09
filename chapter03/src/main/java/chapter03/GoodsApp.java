@@ -19,11 +19,13 @@ public class GoodsApp {
 		
 		System.out.println(Goods.countOfGoods);
 		
-		System.out.println(
-			"상품이름 : " + camera.getName() +
-			", 가격: " + camera.getPrice() +
-			", 재고개수:" + camera.getCountStock() + 
-			", 팔린 개수: " + camera.getCountSold());
+		camera.showInfo();
+		
+		camera.setPrice(500000);
+		int discountPrice = camera.calcDiscountPrice(0.5);
+		System.out.println(discountPrice);
+		
+		
 	}
 
 }
