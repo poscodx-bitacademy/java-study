@@ -1,4 +1,6 @@
-package paint;
+package com.poscodx.paint.shape;
+
+import com.poscodx.paint.i.Drawable;
 
 public abstract class Shape implements Drawable {
 	private String lineColor;

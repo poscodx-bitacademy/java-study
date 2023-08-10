@@ -1,4 +1,4 @@
-package paint;
+package com.poscodx.paint.shape;
 
 public class Circle extends Shape {
 	private int x1, y1;
