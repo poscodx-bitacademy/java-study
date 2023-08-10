@@ -8,12 +8,20 @@ public class Goods {
 	private int countStock;
 	private int countSold;
 	
+
 	public Goods() {
 		// 내부에서는 클래스 이름 생략 가능
 		// Goods.countOfGoods++;
 		countOfGoods++;
 	}
 	
+	public Goods(String name, int price, int countStock, int countSold) {
+		this.name = name;
+		this.price = price;
+		this.countSold = countSold;
+		this.countStock = countStock;
+	}
+
 	public String getName() {
 		return name;
 	}
