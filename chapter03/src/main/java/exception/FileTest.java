@@ -8,7 +8,6 @@ public class FileTest {
 
 	public static void main(String[] args) {
 		FileInputStream fis = null;
-		
 		try {
 			fis = new FileInputStream("hello.txt");
 			int data = fis.read();
