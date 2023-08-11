@@ -9,14 +9,10 @@ public class Point {
 	public Point() {
 	}
 
-
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(x, y);
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
