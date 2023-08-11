@@ -7,6 +7,6 @@ public class Prob05 {
 
 		base.service("낮");
 		base.service("밤");
-		base.service("오후"); 
+		base.service("오후");
 	}
 }
