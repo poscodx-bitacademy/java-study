@@ -17,8 +17,6 @@ public class Printer {
 //	public void println(String s) {
 //		System.out.println(s);
 //	}
-	
-
 
 	public int sum(Integer... nums) {
 		int s = 0;
@@ -28,7 +26,16 @@ public class Printer {
 		
 		return s;
 	}
+
+	public <T> void println(T t) {
+		System.out.print(t);
+	}
 	
+	// 완전 동일
+//	public void println(Object o) {
+//		System.out.print(o);
+//	}
+
 	public <T> void println(T... ts) {
 		for(T t : ts) {
 			System.out.print(t);
