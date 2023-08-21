@@ -10,10 +10,7 @@ public class LoginMain {
 		Scanner scanner = new Scanner(System.in);
 		
 		List<User> joinUsers = new ArrayList<User>();
-		joinUsers.add( new User( "둘리", "1234") );
-		joinUsers.add( new User( "마이콜", "5678") );
-		joinUsers.add( new User( "또치", "4321") );
-		joinUsers.add( new User( "도우너", "8765") );
+		joinUsers.add( new User( "john", "1234") );
 		
 		System.out.print("아이디를 입력하시오 : ");
 		String id = scanner.nextLine();
@@ -36,6 +33,14 @@ public class LoginMain {
 	}
 	
 	public static void login(List<User> users, User user ){
-		/* 코드 작성 */
+		if( !users.contains(user) ){
+			throw new UserNotFoundException();
+		}
+		
+		User savedUser = users.get( users.indexOf( user ) );
+		
+		if( !savedUser.getPassword().equals(user.getPassword()) ){
+			throw new PasswordDismatchException();
+		}
 	}
 }

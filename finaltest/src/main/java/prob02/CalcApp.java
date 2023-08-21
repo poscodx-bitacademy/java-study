@@ -26,9 +26,30 @@ public class CalcApp {
 			int rValue = Integer.parseInt( tokens[ 1 ] );
 			
 			Arithmetic arithmetic = null;
+			switch( tokens[ 2 ] ) {
+				case "+" : {
+					arithmetic = new Add();
+					break;
+				}
+				case "-" : {
+					arithmetic = new Sub();
+					break;
+				}
+				case "*" : {
+					arithmetic = new Mul();
+					break;					
+				}
+				case "/" : {
+					arithmetic = new Div();
+					break;
+				}
+			}
 			
-			/* 코드 작성 */
-
+			if(arithmetic == null) {
+				System.out.println( ">> 알 수 없는 연산입니다.");
+				continue;
+			}
+			
 			int result = arithmetic.calculate(lValue, rValue);
 			System.out.println( ">> " + result );
 		}

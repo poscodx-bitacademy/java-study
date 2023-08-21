@@ -1,7 +1,8 @@
 package prob05;
 
 public class User {
-	private String id;	
+	private String id;
+	
 	private String password;
 
 	public User(String id, String password) {
