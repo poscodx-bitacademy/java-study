@@ -62,7 +62,7 @@ public class RequestHandler extends Thread {
 				// SimpleHttpServer에서는 무시(400 Bad Request)
 				
 				System.out.println("400 Bad Request:" + request);
-				responseStatic400Error(outputStream, tokens[2]);
+				response400Error(outputStream, tokens[2]);
 			}
 			
 			// 예제 응답입니다.
@@ -99,7 +99,7 @@ public class RequestHandler extends Thread {
 		File file = new File(DOCUMENT_ROOT + url);
 		if(!file.exists()) {
 			System.out.println("404 File Not Found:" + url);
-			responseStatic404Error(outputStream, protocol);
+			response404Error(outputStream, protocol);
 			return;
 		}
 		
